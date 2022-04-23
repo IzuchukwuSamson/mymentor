@@ -23,6 +23,8 @@ exports.getMentor = async (req, res) => {
 }
 
 exports.createMentor = async (req, res) => {
+    console.log(req.body)
+    
     const mentor = await Mentor.create(req.body)
 
     res.status(201).json({

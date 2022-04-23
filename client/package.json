@@ -10,8 +10,11 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.6.5",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.14",
+    "vue-slugify": "^0.1.0",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
