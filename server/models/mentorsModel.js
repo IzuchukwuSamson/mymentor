@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
 const mentorSchema = new mongoose.Schema({
+    id: {
+        type: Number
+
+    },
     firstName: {
         type: String,
         // required: [true, 'Firstname is required']

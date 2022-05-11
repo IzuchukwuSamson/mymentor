@@ -2,7 +2,10 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 
-const mentorsRoute = require('./routes/mentorsRoute')
+const mentorsRouter = require('./routes/mentorsRoute')
+const requestRouter = require('./routes/requestRoute')
+const userRouter = require('./routes/userRoute')
+
 
 const app = express()
 
@@ -14,6 +17,10 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json())
 app.use(cors())
 
-app.use('/mentors', mentorsRoute)
+
+app.use('/users', userRouter)
+app.use('/mentors', mentorsRouter)
+app.use('/requests', requestRouter)
+
 
 module.exports = app

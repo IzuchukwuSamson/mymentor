@@ -52,6 +52,10 @@ export default {
             return this.$store.getters['mentors/hasMentors']
         }
     },
+    created() {
+        this.loadMentors()
+
+    },
      methods: {
         // setFilters(updatedFilters) {
         //     this.activeFilters = updatedFilters

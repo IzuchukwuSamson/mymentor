@@ -1,6 +1,7 @@
 const Mentor = require('../models/mentorsModel')
 
 exports.getAllMentors = async (req, res) => {
+    
     const mentors = await Mentor.find()
     res.status(200).json({
         status: 'Success',
@@ -23,7 +24,7 @@ exports.getMentor = async (req, res) => {
 }
 
 exports.createMentor = async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     
     const mentor = await Mentor.create(req.body)
 
